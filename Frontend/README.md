@@ -27,7 +27,7 @@ You may also see any lint errors in the console.
 
 ## git hub run 
 
-Please use this git repository []
+Please use this git repository [https://github.com/DeepinderSinghMSD/FinalProject.git]
 Please make sure to run the backend server first using the node server.js command.
 After that, you can run the npm start command on frontend to run the project on the browser.
 
