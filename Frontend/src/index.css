@@ -1,0 +1,172 @@
+/* app.css */
+
+/* Apply a linear gradient background to the entire app */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #a6eb70, #d1e6a7); /* Light yellow to light green */
+  color: #333;
+}
+
+/* Style for the navigation bar */
+nav {
+  background: #333;
+  color: white;
+  padding: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline
+}
+
+/* General container styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Styling for headers */
+h1, h2, h3 {
+  color: #333;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Button styling */
+button {
+  background-color: #4CAF50; /* Green background */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Styling for input fields */
+input[type="text"], input[type="password"], input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Styling for form elements */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+/* Cart item styling */
+.cart-item {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  background-color: #d1e6a7;
+}
+
+.cart-item h2 {
+  margin: 0 0 0.5rem 0;
+}
+
+.cart-item input[type="number"] {
+  width: 60px;
+  text-align: center;
+}
+
+/* Product item styling */
+.product-item {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  background-color:#d1e6a7;
+}
+
+.product-item h2 {
+  margin: 0 0 0.5rem 0;
+}
+
+/* Order summary styling */
+.order-summary {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.order-summary h1 {
+  margin-bottom: 1rem;
+}
+
+.order-summary div {
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem 0;
+}
+
+.order-summary h3 {
+  margin: 0;
+}
+
+/* Order history styling */
+.order-history {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.order-history ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.order-history li {
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem 0;
+}
+
