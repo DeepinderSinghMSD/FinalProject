@@ -1,6 +1,3 @@
-/* app.css */
-
-/* Apply a linear gradient background to the entire app */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -8,7 +5,7 @@ body {
   color: #333;
 }
 
-/* Style for the navigation bar */
+/*for the navigation bar */
 nav {
   background: #333;
   color: white;
@@ -26,14 +23,14 @@ nav a:hover {
   text-decoration: underline
 }
 
-/* General container styling */
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
 }
 
-/* Styling for headers */
+
 h1, h2, h3 {
   color: #333;
 }
@@ -53,9 +50,9 @@ h3 {
   margin-bottom: 0.5rem;
 }
 
-/* Button styling */
+/* for Button */
 button {
-  background-color: #4CAF50; /* Green background */
+  background-color: #4CAF50; 
   border: none;
   color: white;
   padding: 10px 20px;
@@ -69,10 +66,10 @@ button {
 }
 
 button:hover {
-  background-color: #45a049; /* Darker green on hover */
+  background-color: #45a049; 
 }
 
-/* Styling for input fields */
+/* for input fields */
 input[type="text"], input[type="password"], input[type="number"] {
   width: 100%;
   padding: 10px;
@@ -86,7 +83,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:foc
   outline: none;
 }
 
-/* Styling for form elements */
+
 form {
   max-width: 600px;
   margin: 0 auto;
@@ -98,7 +95,7 @@ label {
   font-weight: bold;
 }
 
-/* Cart item styling */
+/* for Cart item  */
 .cart-item {
   border: 1px solid #ddd;
   padding: 1rem;
@@ -116,7 +113,7 @@ label {
   text-align: center;
 }
 
-/* Product item styling */
+/* for Product item  */
 .product-item {
   border: 1px solid #ddd;
   padding: 1rem;
@@ -129,7 +126,7 @@ label {
   margin: 0 0 0.5rem 0;
 }
 
-/* Order summary styling */
+/* for Order summary */
 .order-summary {
   border: 1px solid #ddd;
   padding: 1rem;
@@ -149,24 +146,5 @@ label {
 
 .order-summary h3 {
   margin: 0;
-}
-
-/* Order history styling */
-.order-history {
-  border: 1px solid #ddd;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 5px;
-  background-color: #fff;
-}
-
-.order-history ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.order-history li {
-  border-bottom: 1px solid #ddd;
-  padding: 0.5rem 0;
 }
 

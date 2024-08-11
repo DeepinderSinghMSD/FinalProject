@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const Order = require('../models/Order'); // Adjust path as needed
+const Order = require('../models/Order');
 
 router.post('/', async (req, res) => {
-  console.log('Received order data:', req.body); // For debugging
+  console.log('Received order data:', req.body); 
 
   const { user, products, totalAmount, paymentMethodId, address } = req.body;
-
+// for creating new order
   if (!Array.isArray(products) || products.length === 0 ||
       typeof totalAmount !== 'number' || !paymentMethodId ||
       !address || !address.street || !address.city || !address.state || !address.zip) {
@@ -15,7 +15,7 @@ router.post('/', async (req, res) => {
 
   try {
     const order = new Order({
-      user, // Optional
+      user, 
       products,
       totalAmount,
       paymentMethodId,
@@ -39,7 +39,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Get a single order by ID
+// for gettin a single order by ID
 router.get('/:id', async (req, res) => {
   try {
     const order = await Order.findById(req.params.id);
@@ -50,7 +50,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// Update an order by ID
+// for Updating an order by ID
 router.put('/:id', async (req, res) => {
   const { user, products, totalAmount, paymentMethodId, address } = req.body;
 
@@ -77,7 +77,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-// Delete an order by ID
+// for deleting an order by ID
 router.delete('/:id', async (req, res) => {
   try {
     const order = await Order.findByIdAndDelete(req.params.id);

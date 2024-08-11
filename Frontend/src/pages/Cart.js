@@ -16,9 +16,9 @@ function Cart() {
           {cart.map(item => (
             <CartItem key={item._id} item={item} />
           ))}
-          <button onClick={clearCart}>Clear Cart</button>
+          <button onClick={clearCart}>Clear Your Cart</button>
           <Link to="/checkout">
-            <button>Proceed to Checkout</button>
+            <button>Go to Checkout</button>
           </Link>
         </div>
       )}

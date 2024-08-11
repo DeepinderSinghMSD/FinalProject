@@ -3,13 +3,13 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
-// Import routes
+// Importing routes
 const productRoutes = require('./routes/products');
 const authRoutes = require('./routes/auth');
 const orderRoutes = require('./routes/orders');
 const userRoutes = require('./routes/users');
 
-// Initialize express app
+// Initializing express app
 const app = express();
 const port = 5000;
 
@@ -20,16 +20,16 @@ app.use(bodyParser.json());
 // MongoDB connection URI
 const mongoURI = 'mongodb+srv://deepindersingh4359:SUpcjDgYFeizlySq@cluster0.gdiwsur.mongodb.net/ecommerce?retryWrites=true&w=majority&appName=Cluster0';
 
-// Connect to MongoDB
+// Connecting to MongoDB
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log('MongoDB connection error:', err));
 
-// Use routes
+// Using the routes
 app.use('/api/products', productRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/users', userRoutes);
 
-// Start the server
+// Starting the server
 app.listen(port, () => console.log(`Server running on port ${port}`));

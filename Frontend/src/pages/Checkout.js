@@ -16,7 +16,7 @@ function Checkout() {
   return (
     <div>
       <h1>Checkout</h1>
-      <h2>Order Summary</h2>
+      <h2>Your Order</h2>
       {cart.map(item => (
         <div key={item._id}>
           <h3>{item.name}</h3>

@@ -2,7 +2,7 @@ const express = require('express');
 const Product = require('../models/Product');
 const router = express.Router();
 
-// Get all products
+// for getting all products
 router.get('/', async (req, res) => {
   try {
     const products = await Product.find();
@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Create a new product (Admin only)
+// for creating a new product 
 router.post('/', async (req, res) => {
   const product = new Product(req.body);
   try {
@@ -22,7 +22,7 @@ router.post('/', async (req, res) => {
     res.status(400).json({ message: err.message });
   }
 });
-
+// for getting the product by id
 router.get('/:id', async (req, res) => {
   try {
     const product = await Product.findById(req.params.id);
@@ -36,7 +36,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// Update a product by ID (Admin only)
+// for updating a product by id 
 router.put('/:id', async (req, res) => {
   try {
     const updatedProduct = await Product.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
@@ -49,6 +49,8 @@ router.put('/:id', async (req, res) => {
     res.status(400).json({ message: err.message });
   }
 });
+
+// for deleting a product
 
 router.delete('/:id', async (req, res) => {
   try {

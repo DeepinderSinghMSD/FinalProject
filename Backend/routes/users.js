@@ -3,7 +3,7 @@ const router = express.Router();
 const User = require('../models/User');
 const jwt = require('jsonwebtoken');
 
-// Middleware to verify token
+// Middleware for verifying token
 const authenticateToken = (req, res, next) => {
   const authHeader = req.headers.authorization;
   const token = authHeader && authHeader.split(' ')[1];
@@ -16,7 +16,7 @@ const authenticateToken = (req, res, next) => {
   });
 };
 
-// Get user data
+// for getting user data
 router.get('/me', authenticateToken, async (req, res) => {
   try {
     const user = await User.findById(req.user.id);
@@ -27,7 +27,7 @@ router.get('/me', authenticateToken, async (req, res) => {
   }
 });
 
-// Get a single user by ID (Admin only)
+// for getting a single user by ID 
 router.get('/:id', authenticateToken, async (req, res) => {
     try {
       const user = await User.findById(req.params.id);
@@ -38,7 +38,7 @@ router.get('/:id', authenticateToken, async (req, res) => {
     }
   });
   
-  // Create a new user (Admin only)
+  // for creating a new user 
   router.post('/', async (req, res) => {
     const { username, password } = req.body;
     try {
@@ -50,7 +50,7 @@ router.get('/:id', authenticateToken, async (req, res) => {
     }
   });
   
-  // Update a user by ID (Admin only)
+  // for updating a user by ID 
   router.put('/:id', authenticateToken, async (req, res) => {
     const { username, password } = req.body;
     try {
@@ -66,7 +66,7 @@ router.get('/:id', authenticateToken, async (req, res) => {
     }
   });
   
-  // Delete a user by ID (Admin only)
+  // for deleting a user by ID 
   router.delete('/:id', authenticateToken, async (req, res) => {
     try {
       const deletedUser = await User.findByIdAndDelete(req.params.id);

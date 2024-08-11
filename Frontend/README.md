@@ -1,6 +1,35 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+
+This project is a simple e-commerce website built using assignment 1 and assignment 2 with React for the frontend and Node.js with Express for the backend. The main things in this project are product listings, a shopping cart with adjustable quantities, a checkout process with Stripe integration, user registration and login, and an order summary. All the data is recorded on the backend database using mongoDb.
+
+## Prerequisites
+
+make sure that you have the following things installed on your system:
+
+- [Node.js]
+- [npm]
+- [MongoDB]
+- [Stripe]
+
+### `node server.js on backend`
+This will start the backend server on [http://localhost:5000]
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+## git hub run 
+
+Please use this git repository []
+Please make sure to run the backend server first using the node server.js command.
+After that, you can run the npm start command on frontend to run the project on the browser.
 
 ## Available Scripts
 
