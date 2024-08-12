@@ -11,7 +11,7 @@ const CheckoutForm = () => {
   const [isProcessing, setIsProcessing] = useState(false);
   const [message, setMessage] = useState('');
   
-  // Address state
+  
   const [address, setAddress] = useState({
     street: '',
     city: '',
@@ -53,7 +53,7 @@ const CheckoutForm = () => {
         paymentMethodId: paymentMethod.id,
         products: cart.map(item => ({ product: item._id, quantity: item.quantity || 1 })),
         totalAmount: getTotalPrice(),
-        address: address // Include address in the request
+        address: address 
       });
 
       setMessage('Order placed successfully!');
